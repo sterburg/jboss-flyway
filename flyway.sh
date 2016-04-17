@@ -5,5 +5,5 @@
   -password=${ORACLE_PASSWORD} \
   -schema=${ORACLE_DATABASE} \
   -locations=/var/git/src/main/resources/sql \
-  -target=${OPENSHIFT_BUILD_COMMIT}
+  -target=${OPENSHIFT_BUILD_REFERENCE/v/}
 
