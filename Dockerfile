@@ -1,4 +1,4 @@
-FROM 172.30.150.84:5000/jboss/golden:latest
+FROM 172.30.195.192:5000/jboss/jboss-eap64-oracle
 
 USER 0
 RUN  curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0/flyway-commandline-4.0-linux-x64.tar.gz |tar -C/usr/local -zx; \
