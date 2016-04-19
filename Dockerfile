@@ -3,7 +3,8 @@ FROM 172.30.195.192:5000/jboss/jboss-eap64-oracle
 USER 0
 RUN  curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0/flyway-commandline-4.0-linux-x64.tar.gz |tar -C/usr/local -zx; \
      chmod +x   /usr/local/flyway-4.0/flyway; \
-     chmod +rwx /usr/local/flyway-4.0/sql/
+     rm -rf /usr/local/flyway-4.0/sql; \
+     ln -s /home/jboss/source/src/main/resources/sql/ /usr/local/flyway-4.0
 COPY flyway.sh   /usr/local/bin/flyway
 COPY flyway.conf /usr/local/flyway-4.0/conf/flyway.conf
 USER 185
