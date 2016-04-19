@@ -6,7 +6,7 @@ ls /home/jboss/source/src/main/resources/sql/*.sql
 
 cd /usr/local/flyway-4.0/sql
 
-/usr/local/flyway-4.0/flyway $* \
+/usr/local/flyway-4.0/flyway -X $* \
   -user=${MY_USERNAME} \
   -password=${MY_PASSWORD} \
   -schemas=${MY_DATABASE} \
