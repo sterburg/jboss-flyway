@@ -1,6 +1,10 @@
-#!/bin/sh
+#!/bin/sh -x
 
-cp -va /var/git/jboss-greeter/src/main/resources/sql/* /usr/local/flyway-4.0/sql/
+echo "Copying sql files to Flyway:"
+ls -l /var/git/
+ls /var/git/jboss-greeter/src/main/resources/sql/*.sql
+
+cp -va /var/git/jboss-greeter/src/main/resources/sql/*.sql /usr/local/flyway-4.0/sql/
 cd /usr/local/flyway-4.0/sql
 
 /usr/local/flyway-4.0/flyway $* \
