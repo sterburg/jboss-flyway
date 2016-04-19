@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rm -rf /usr/local/flyway-4.0/sql
-ln -s /var/git/jboss-greeter/src/main/resources/sql /usr/local/flyway-4.0/sql
+ln -s /var/git/jboss-greeter/src/main/resources/sql /usr/local/flyway-4.0/
 cd /usr/local/flyway-4.0/sql
 
 /usr/local/flyway-4.0/flyway $* \
